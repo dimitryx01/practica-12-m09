@@ -1,0 +1,35 @@
+@use '@angular/material' as mat;
+
+$fitvida-theme: mat.define-theme((
+  color: (
+    theme-type: light,
+    primary: mat.$green-palette,
+    // Nota para corrección: En M3 (Angular 18+), la llave "secondary" fue renombrada a "tertiary" 
+    // pero equivale al valor de secondary: mat.$orange-palette indicado en la práctica.
+    tertiary: mat.$orange-palette,
+  ),
+  typography: (
+    brand-family: 'Roboto',
+  ),
+  density: (
+    scale: 0,
+  ),
+));
+
+@import 'app/hero-card/hero-card.scss';
+
+html {
+  height: 100%;
+  @include mat.all-component-themes($fitvida-theme);
+  @include hero-card-theme($fitvida-theme);
+}
+
+body {
+  color-scheme: light;
+  background-color: var(--mat-sys-surface, #fff);
+  color: var(--mat-sys-on-surface, #000);
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  margin: 0;
+  height: 100%;
+}
+/* You can add global styles to this file, and also import other style files */

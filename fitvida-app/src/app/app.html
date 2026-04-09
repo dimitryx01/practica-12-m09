@@ -1,0 +1,116 @@
+<!-- Navbar -->
+<mat-toolbar color="primary" class="main-toolbar">
+  <span>FitVida Wellness Studio</span>
+  <span class="spacer"></span>
+  <button mat-button>Inicio</button>
+  <button mat-button>Servicios</button>
+  <button mat-button>Contacto</button>
+</mat-toolbar>
+
+<!-- Hero Section -->
+<section class="hero-section">
+  <mat-card class="hero-banner">
+    <mat-card-header>
+      <mat-card-title><h2>Encuentra tu balance perfecto</h2></mat-card-title>
+      <mat-card-subtitle>Únete a nuestra comunidad y transforma tu vida hoy mismo</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-actions>
+      <button mat-raised-button color="secondary">Empieza hoy</button>
+    </mat-card-actions>
+  </mat-card>
+</section>
+
+<!-- Services Cards -->
+<section class="services-section">
+  <h2>Nuestros Servicios</h2>
+  <div class="cards-container">
+    
+    <!-- Service 1 -->
+    <mat-card class="service-card">
+      <mat-card-header>
+        <mat-card-title>Yoga</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>Mejora tu flexibilidad, reduce el estrés y encuentra la paz interior.</p>
+        <mat-chip-set>
+          <mat-chip>Principiantes</mat-chip>
+          <mat-chip>Avanzados</mat-chip>
+        </mat-chip-set>
+        <p class="price">Desde 30€/mes</p>
+      </mat-card-content>
+    </mat-card>
+
+    <!-- Service 2 -->
+    <mat-card class="service-card">
+      <mat-card-header>
+        <mat-card-title>Pilates</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>Fortalece tu core y mejora tu postura con clases guiadas de Pilates.</p>
+        <mat-chip-set>
+          <mat-chip>Rehabilitación</mat-chip>
+          <mat-chip>Terapéutico</mat-chip>
+        </mat-chip-set>
+        <p class="price">Desde 35€/mes</p>
+      </mat-card-content>
+    </mat-card>
+
+    <!-- Service 3 -->
+    <mat-card class="service-card">
+      <mat-card-header>
+        <mat-card-title>CrossFit</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>Entrenamiento de alta intensidad para llevar tu cuerpo al siguiente nivel.</p>
+        <mat-chip-set>
+          <mat-chip>Fuerza</mat-chip>
+          <mat-chip>Cardio</mat-chip>
+        </mat-chip-set>
+        <p class="price">Desde 45€/mes</p>
+      </mat-card-content>
+    </mat-card>
+
+  </div>
+</section>
+
+<!-- Custom Component -->
+<section class="premium-section">
+  <h2>Servicio Destacado</h2>
+  <app-hero-card 
+    title="Entrenamiento Personalizado" 
+    description="Nuestros expertos diseñarán una rutina exclusiva para ti."
+    actionText="Consultar disponibilidad">
+  </app-hero-card>
+</section>
+
+<!-- Contact Form -->
+<section class="contact-section">
+  <h2>Contacto y Reserva</h2>
+  <form class="contact-form">
+    <mat-form-field appearance="fill">
+      <mat-label>Nombre</mat-label>
+      <input matInput placeholder="Tu nombre">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input matInput type="email" placeholder="tu@email.com">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Servicio de interés</mat-label>
+      <mat-select>
+        <mat-option value="yoga">Yoga</mat-option>
+        <mat-option value="pilates">Pilates</mat-option>
+        <mat-option value="crossfit">CrossFit</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary">Enviar Mensaje</button>
+  </form>
+</section>
+
+<!-- Footer -->
+<footer class="app-footer">
+  <p>&copy; 2026 FitVida Wellness Studio. Todos los derechos reservados.</p>
+</footer>
